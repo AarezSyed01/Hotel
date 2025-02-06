@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syed's Shahi Darbar</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Optional: Add some basic styling for the menu items */
+        .menu-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .menu-item img {
+            width: 100px;
+            height: 100px;
+            margin-right: 15px;
+            border-radius: 8px;
+            object-fit: cover; /* Ensures the image fits nicely */
+        }
+        .menu-item span {
+            font-size: 1.2em;
+        }
+        .menu-item button {
+            margin-left: auto; /* Aligns the button to the right */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images.png" alt="img" width="95px">
+        <br>
+        <br>
+        <marquee behavior="scroll" direction="left" scrollamount="7">Flat 50% Discount on all orders above ₹500  ||  90% OFF on Your First Order   ||  Special Offer: Buy 1 Get 1 Free on selected items   ||     Ramzan special Haleem 75% OFF</marquee>
+        <h1>WELCOME TO SYED's SHAHI DARBAR</h1>
+        <h2>Order Your Favorite Food</h2>
+    </header>
+    
+    <main>
+        <section id="menu">
+            <h3>Menu</h3>
+            <ul>
+                <!-- Chicken Biryani -->
+                <li class="menu-item">
+                    <span>Chicken Biryani - 60₹</span>
+                    <button onclick="addToOrder('Chicken Biryani', 60)">Order</button>
+                </li>
+                <!-- Shawarma -->
+                <li class="menu-item">
+                    <span>Shawarma - 99₹</span>
+                    <button onclick="addToOrder('Shawarma', 99)">Order</button>
+                </li>
+                <!-- Chicken Handi -->
+                <li class="menu-item">
+                    <span>Chicken Handi - 250₹</span>
+                    <button onclick="addToOrder('Chicken Handi', 250)">Order</button>
+                </li>
+                <!-- Paneer Masala -->
+                <li class="menu-item">
+                    <span>Paneer Masala - 220₹</span>
+                    <button onclick="addToOrder('Paneer Masala', 220)">Order</button>
+                </li>
+                <!-- Butter Chicken -->
+                <li class="menu-item">
+                    <span>Butter Chicken - 260₹</span>
+                    <button onclick="addToOrder('Butter Chicken', 260)">Order</button>
+                </li>
+                <!-- Chicken Mandi -->
+                <li class="menu-item">
+                    <span>Chicken Mandi (6 persons) - 999₹</span>
+                    <button onclick="addToOrder('Chicken Mandi', 999)">Order</button>
+                </li>
+            </ul>
+        </section>
+
+        <section id="order-summary">
+            <h3>Your Order</h3>
+            <ul id="order-list"></ul>
+            <p id="total-price">Total: ₹0</p>
+            <button onclick="submitOrder()">Submit Order</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Syed's Shahi Darbar. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
